@@ -14,5 +14,14 @@ const addTodo = () =>{
         inp.setAttribute('id', 'todo');
         ul.appendChild(li);
         li.appendChild(inp);
+    }else{
+        alert('Enter value in todo')
     }
 }
+
+todoInp.addEventListener('keypress', (e)=>{
+    if(e.key === 'Enter'){
+        addTodo()
+    }
+})
+addTodoBtn.addEventListener('click', addTodo)
