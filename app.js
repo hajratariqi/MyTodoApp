@@ -29,7 +29,7 @@ const addTodo = () =>{
         li.appendChild(editBtn);
         editBtn.setAttribute('onclick', 'editTodo(this)')
 
-         
+        todoInp.value = "";  
     }else{
         alert('Enter value in todo')
     }
@@ -40,8 +40,13 @@ todoInp.addEventListener('keypress', (e)=>{
         addTodo()
     }
 })
+addTodoBtn.addEventListener('click', addTodo)
+
 delAll.addEventListener('click', ()=>{
     ul.innerHTML = ''
 })
-
-addTodoBtn.addEventListener('click', addTodo)
+const editTodo = (e) => {
+    let editInp = e.parentNode.firstChild
+    editInp.hasAttribute('disabled')
+    // console.log(editInp);
+}
