@@ -22,6 +22,13 @@ const addTodo = () =>{
          delBtn.appendChild(delText);
          li.appendChild(delBtn);
 
+          // Create Edit button
+        let editBtn = document.createElement('button');
+        let editText = document.createTextNode('Edit');
+        editBtn.appendChild(editText);
+        li.appendChild(editBtn);
+        editBtn.setAttribute('onclick', 'editTodo(this)')
+
          
     }else{
         alert('Enter value in todo')
