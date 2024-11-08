@@ -47,6 +47,12 @@ delAll.addEventListener('click', ()=>{
 })
 const editTodo = (e) => {
     let editInp = e.parentNode.firstChild
-    editInp.hasAttribute('disabled')
-    // console.log(editInp);
+    if(editInp.hasAttribute('disabled')){
+        editInp.removeAttribute('disabled')
+        editInp.focus()
+        e.innerHTML = 'Save'
+    }else{
+        e.innerHTML = 'Edit'
+        editInp.setAttribute('disabled', true)
+    }
 }
