@@ -17,9 +17,11 @@ const addTodo = () =>{
 
          // Create delete button
          let delBtn = document.createElement('button');
-         let delText = document.createTextNode('Delete');
+         let delIcon = document.createElement('img');
+         delIcon.src = 'del.png'
+         delIcon.classList.add('del-img')
          delBtn.setAttribute('onclick', 'this.parentNode.remove()');
-         delBtn.appendChild(delText);
+         delBtn.appendChild(delIcon);
          li.appendChild(delBtn);
 
           // Create Edit button
@@ -52,7 +54,9 @@ const editTodo = (e) => {
         editInp.focus()
         e.innerHTML = 'Save'
     }else{
+        if(editInp.value){
         e.innerHTML = 'Edit'
         editInp.setAttribute('disabled', true)
+        }
     }
 }
