@@ -24,4 +24,8 @@ todoInp.addEventListener('keypress', (e)=>{
         addTodo()
     }
 })
+delAll.addEventListener('click', ()=>{
+    ul.innerHTML = ''
+})
+
 addTodoBtn.addEventListener('click', addTodo)
