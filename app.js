@@ -26,8 +26,10 @@ const addTodo = () =>{
 
           // Create Edit button
         let editBtn = document.createElement('button');
-        let editText = document.createTextNode('Edit');
-        editBtn.appendChild(editText);
+        let editIcon = document.createElement('img');
+        editIcon.src = 'edit.webp'
+        editIcon.classList.add('del-img')
+        editBtn.appendChild(editIcon);
         li.appendChild(editBtn);
         editBtn.setAttribute('onclick', 'editTodo(this)')
 
