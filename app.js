@@ -55,6 +55,8 @@ const editTodo = (e) => {
         editInp.removeAttribute('disabled')
         editInp.focus()
         e.innerHTML = 'save'
+        const length = editInp.value.length;
+        editInp.setSelectionRange(length, length);
         e.classList.add('saveBtn')
     }else{
         if(editInp.value){
