@@ -47,13 +47,13 @@ ul{
 }
 li{
     border-radius: 5px;
-    padding: 2px 7px;
+    padding: 2px 20px;
     /* box-shadow: 1px 1px 1px #dadada; */
     border: 1px solid #dadada;
     margin-top: 10px;
 }
 .cross-img{
-    width: 10px;
+    width: 17px;
     margin-left: 10px;
 }
 .row, li{
@@ -65,7 +65,7 @@ li{
 }
 
 .del-img{
-    width: 16px;
+    width: 20px;
 }
 button{
     border: none;
