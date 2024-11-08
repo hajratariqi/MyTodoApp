@@ -9,6 +9,12 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+#addTodo{
+    color: white;
+    border-radius: 5px;
+    padding:5px 10px;
+    background-color: rgb(24, 21, 21);
+}
 .row{
     gap: 10px;
     display: flex;
