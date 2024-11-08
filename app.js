@@ -15,15 +15,6 @@ const addTodo = () =>{
         ul.appendChild(li);
         li.appendChild(inp);
 
-         // Create delete button
-         let delBtn = document.createElement('button');
-         let delIcon = document.createElement('img');
-         delIcon.src = 'del.png'
-         delIcon.classList.add('del-img')
-         delBtn.setAttribute('onclick', 'this.parentNode.remove()');
-         delBtn.appendChild(delIcon);
-         li.appendChild(delBtn);
-
           // Create Edit button
         let editBtn = document.createElement('button');
         let editIcon = document.createElement('img');
@@ -32,6 +23,15 @@ const addTodo = () =>{
         editBtn.appendChild(editIcon);
         li.appendChild(editBtn);
         editBtn.setAttribute('onclick', 'editTodo(this)')
+
+        // Create delete button
+        let delBtn = document.createElement('button');
+        let delIcon = document.createElement('img');
+        delIcon.src = 'del.png'
+        delIcon.classList.add('cross-img')
+        delBtn.setAttribute('onclick', 'this.parentNode.remove()');
+        delBtn.appendChild(delIcon);
+        li.appendChild(delBtn);
 
         todoInp.value = "";  
     }else{

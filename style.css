@@ -38,8 +38,12 @@ body{
 }
 li{
     border-radius: 5px;
-    padding: 4px 10px;
+    padding: 2px 7px;
     box-shadow: 1px 1px 1px #dadada;
+}
+.cross-img{
+    width: 10px;
+    margin-left: 10px;
 }
 .row, li{
     gap: 4px;
