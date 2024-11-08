@@ -8,6 +8,7 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    font-family: sans-serif;
 }
 #addTodo{
     color: white;
@@ -15,11 +16,26 @@ body{
     padding:5px 10px;
     background-color: rgb(24, 21, 21);
 }
+#todo{
+    border: none;
+    padding: 4px 15px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: transparent;
+    box-shadow: 1px 1px 1px #dadada;
+}
 .row{
     gap: 10px;
     display: flex;
+    margin: 10px 0px;
+    box-sizing: border-box;
     justify-content: center;
 }
+input[type="text"]::placeholder {
+    color: grey !important;
+    opacity: 1 !important; /* Ensure visibility in all browsers */
+}
+
 .del-img{
     width: 16px;
 }
