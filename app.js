@@ -54,9 +54,11 @@ const editTodo = (e) => {
     if(editInp.hasAttribute('disabled')){
         editInp.removeAttribute('disabled')
         editInp.focus()
-        e.innerHTML = 'Save'
+        e.innerHTML = 'save'
+        e.classList.add('saveBtn')
     }else{
         if(editInp.value){
+            e.removeAttribute('class')
         e.innerHTML = `<img src='edit.webp' class='del-img'/>`
         editInp.setAttribute('disabled', true)
         }
