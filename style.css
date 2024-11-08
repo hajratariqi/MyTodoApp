@@ -12,8 +12,15 @@ body{
 }
 #addTodo{
     color: white;
+    padding: 4px 10px;
     border-radius: 5px;
-    padding:5px 10px;
+    background-color: rgb(24, 21, 21);
+}
+#delAll{
+    color: white;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 5px;
     background-color: rgb(24, 21, 21);
 }
 #todo{
@@ -21,19 +28,25 @@ body{
     padding: 4px 15px;
     font-size: 12px;
     border-radius: 5px;
+    width: 100%;
     background-color: transparent;
     box-shadow: 1px 1px 1px #dadada;
 }
-.row{
-    gap: 10px;
+#todoTask{
+    border: none;
+    background-color: transparent;
+}
+li{
+    border-radius: 5px;
+    padding: 4px 10px;
+    box-shadow: 1px 1px 1px #dadada;
+}
+.row, li{
+    gap: 4px;
     display: flex;
     margin: 10px 0px;
     box-sizing: border-box;
     justify-content: center;
-}
-input[type="text"]::placeholder {
-    color: grey !important;
-    opacity: 1 !important; /* Ensure visibility in all browsers */
 }
 
 .del-img{

@@ -2,7 +2,7 @@ let addTodoBtn = document.getElementById('addTodo');
 let todoInp = document.getElementById('todo');
 let ul = document.getElementById('todoList');
 let delAll = document.getElementById('delAll');
-let todo = document.getElementById('todo');
+let todo = document.getElementById('todoTask');
 
 const addTodo = () =>{
     if(todoInp.value){
@@ -11,7 +11,7 @@ const addTodo = () =>{
         inp.setAttribute('disabled', true);
         inp.setAttribute('type', 'text');
         inp.setAttribute('value', todoInp.value);
-        inp.setAttribute('id', 'todo');
+        inp.setAttribute('id', 'todoTask');
         ul.appendChild(li);
         li.appendChild(inp);
 
@@ -57,7 +57,7 @@ const editTodo = (e) => {
         e.innerHTML = 'Save'
     }else{
         if(editInp.value){
-        e.innerHTML = 'Edit'
+        e.innerHTML = `<img src='edit.webp' class='del-img'/>`
         editInp.setAttribute('disabled', true)
         }
     }
