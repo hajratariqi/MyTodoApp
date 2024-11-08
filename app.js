@@ -14,6 +14,15 @@ const addTodo = () =>{
         inp.setAttribute('id', 'todo');
         ul.appendChild(li);
         li.appendChild(inp);
+
+         // Create delete button
+         let delBtn = document.createElement('button');
+         let delText = document.createTextNode('Delete');
+         delBtn.setAttribute('onclick', 'this.parentNode.remove()');
+         delBtn.appendChild(delText);
+         li.appendChild(delBtn);
+
+         
     }else{
         alert('Enter value in todo')
     }
