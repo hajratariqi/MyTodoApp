@@ -10,37 +10,47 @@ body{
     justify-content: center;
     font-family: sans-serif;
 }
+h1 {
+    margin-bottom: 20px;
+}
 #addTodo{
     color: white;
     padding: 4px 10px;
     border-radius: 5px;
     background-color: rgb(24, 21, 21);
 }
+ul{
+    margin-top: 20px;
+}
 #todo{
     border: none;
-    padding: 4px 15px;
-    font-size: 12px;
-    border-radius: 5px;
     width: 100%;
+    font-size: 20px;
+    padding: 3px;
+    margin-right: 10px;
     background-color: transparent;
-    box-shadow: 1px 1px 1px #dadada;
+    border-bottom: 1px solid black;
 }
 #todoTask{
     border: none;
-    color: black;
+    color: rgb(34, 31, 31);
     padding: 5px;
+    font-size: 20px;
     background-color: transparent;
 }
 .saveBtn{
-    padding: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 17px;
     border-radius: 5px;
     background-color: black;
-    color: white;
 }
 li{
     border-radius: 5px;
     padding: 2px 7px;
-    box-shadow: 1px 1px 1px #dadada;
+    /* box-shadow: 1px 1px 1px #dadada; */
+    border: 1px solid #dadada;
+    margin-top: 10px;
 }
 .cross-img{
     width: 10px;
