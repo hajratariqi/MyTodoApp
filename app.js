@@ -3,7 +3,9 @@ let todoInp = document.getElementById('todo');
 let ul = document.getElementById('todoList');
 let delAll = document.getElementById('delAll');
 let todo = document.getElementById('todoTask');
-
+let todosCount = document.getElementById('todosCount')
+let todoNum = document.getElementById('todoNum')
+let count = 0
 const addTodo = () =>{
     if(todoInp.value){
         let li = document.createElement('li');
@@ -11,7 +13,20 @@ const addTodo = () =>{
         inp.setAttribute('disabled', true);
         inp.setAttribute('type', 'text');
         inp.setAttribute('value', todoInp.value);
-        inp.setAttribute('id', 'todoTask');
+        inp.setAttribute('id', 'todoTask')
+        todosCount.innerHTML = 'Your Remaining todos: '
+        count += 1;
+        todoNum.innerHTML = count;
+        
+        todosCount.appendChild(todoNum)
+        console.log(count);
+         
+
+          // check box in todo item
+          let checkBox = document.createElement('input')
+          checkBox.setAttribute('type', 'checkbox')
+          li.appendChild(checkBox)
+
         ul.appendChild(li);
         li.appendChild(inp);
 
@@ -49,8 +64,10 @@ addTodoBtn.addEventListener('click', addTodo)
 delAll.addEventListener('click', ()=>{
     ul.innerHTML = ''
 })
+
 const editTodo = (e) => {
     let editInp = e.parentNode.firstChild
+
     if(editInp.hasAttribute('disabled')){
         editInp.removeAttribute('disabled')
         editInp.focus()
@@ -60,9 +77,14 @@ const editTodo = (e) => {
         e.classList.add('saveBtn')
     }else{
         if(editInp.value){
-            e.removeAttribute('class')
         e.innerHTML = `<img src='edit.webp' class='del-img'/>`
         editInp.setAttribute('disabled', true)
+        e.removeAttribute('class')
         }
     }
+    editInp.addEventListener('keypress', (b) =>{  
+        if(b.key === 'Enter'){
+            editTodo(e)
+        }
+    })
 }
