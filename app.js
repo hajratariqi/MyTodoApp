@@ -6,6 +6,7 @@ let todo = document.getElementById('todoTask');
 let todosCount = document.getElementById('todosCount')
 let todoNum = document.getElementById('todoNum')
 let count = 0
+
 const addTodo = () =>{
     if(todoInp.value){
         let li = document.createElement('li');
@@ -16,17 +17,26 @@ const addTodo = () =>{
         inp.setAttribute('id', 'todoTask')
         todosCount.innerHTML = 'Your Remaining todos: '
         count += 1;
-        todoNum.innerHTML = count;
-        
-        todosCount.appendChild(todoNum)
-        console.log(count);
-         
 
           // check box in todo item
           let checkBox = document.createElement('input')
           checkBox.setAttribute('type', 'checkbox')
-          li.appendChild(checkBox)
+          checkBox.addEventListener('click', ()=>{
+            if(checkBox.checked){
+                count -= 1;
+                inp.style.textDecoration = 'line-through'
+                inp.style.color = 'gray'
+            }else{
+                count += 1;
+                inp.style.textDecoration = 'none'
+                inp.style.color = 'black'
+            }
+            todoNum.innerHTML = count;
+          })
 
+          
+        todosCount.appendChild(todoNum)
+        li.appendChild(checkBox)
         ul.appendChild(li);
         li.appendChild(inp);
 
@@ -49,6 +59,7 @@ const addTodo = () =>{
         li.appendChild(delBtn);
 
         todoInp.value = "";  
+        todoNum.innerHTML = count;
     }else{
         alert('Enter value in todo')
     }
