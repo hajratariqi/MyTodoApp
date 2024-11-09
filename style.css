@@ -112,7 +112,12 @@ li:hover {
     width: 100%;
     outline: none;
 }
+.focused{
+    border: 1px solid #6200ea !important;
+    padding: 10px;
+    border-radius: 10px;
 
+}
 li button {
     border: none;
     background-color: transparent;

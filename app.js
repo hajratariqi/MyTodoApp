@@ -95,7 +95,11 @@ const editTodo = (e) => {
         e.innerHTML = 'save'
         const length = editInp.value.length;
         editInp.setSelectionRange(length, length);
+        editInp.classList.add('focused');
         e.classList.add('saveBtn')
+        editInp.addEventListener('blur', () => {
+            editInp.classList.remove('focused');
+        });
     }else{
         if(editInp.value){
         e.innerHTML = `<img src='edit.webp' class='del-img'/>`
