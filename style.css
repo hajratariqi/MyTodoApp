@@ -36,6 +36,15 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.saveBtn{
+    width: 70px;
+    border-radius: 10px;
+    color: white;
+    background-color: #6200ea;
+}
+.del-img{
+    width: 20px;
+}
 #todo {
     flex: 1;
     padding: 0.8rem;
@@ -108,12 +117,13 @@ li button {
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin: 0px 10px;
     padding: 0.3rem;
     border-radius: 50%;
     transition: background-color 0.2s;
 }
 
-li button:hover {
+li button:hover:not(button) {
     background-color: #e0e0e0;
 }
 

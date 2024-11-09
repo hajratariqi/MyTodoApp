@@ -27,14 +27,8 @@ const addTodo = () =>{
 
           checkBox.addEventListener('click', ()=>{
           if(checkBox.checked){
-                count -= 1;
-                inp.style.textDecoration = 'line-through'
-                inp.style.color = 'gray'
-            }else{
-                count += 1;
-                inp.style.textDecoration = 'none'
-                inp.style.color = 'black'
-            }
+                count -= 1; inp.style.textDecoration = 'line-through'; inp.style.color = 'gray'}
+                else{count += 1; inp.style.textDecoration = 'none'; inp.style.color = 'black'}
             todoNum.innerHTML = count;
           })
 
@@ -48,7 +42,6 @@ const addTodo = () =>{
         ul.appendChild(li);
         li.appendChild(inp);
 
-        
           // Create Edit button
         let editBtn = document.createElement('button');
         let editIcon = document.createElement('img');
@@ -66,7 +59,6 @@ const addTodo = () =>{
         delBtn.setAttribute('onclick', 'removeTodo(this)');
         delBtn.appendChild(delIcon);
         li.appendChild(delBtn);
-        console.log(delBtn);
         
         btnContainer.appendChild(editBtn);
         btnContainer.appendChild(delBtn);
@@ -79,8 +71,6 @@ const addTodo = () =>{
         inpContainer.appendChild(inp)
 
         li.appendChild(btnContainer);
-        console.log(li);
-        
     }else{
         alert('Enter value in todo')
     }
@@ -98,8 +88,7 @@ delAll.addEventListener('click', ()=>{
 })
 
 const editTodo = (e) => {
-    let editInp = e.parentNode.firstChild
-
+    let editInp = e.parentNode.parentNode.firstChild.childNodes[1]
     if(editInp.hasAttribute('disabled')){
         editInp.removeAttribute('disabled')
         editInp.focus()
@@ -123,7 +112,6 @@ const editTodo = (e) => {
 
 const removeTodo = (e) =>{
     count -=1;
-    console.log(count);
     todoNum.innerHTML = count;
     e.parentNode.parentNode.remove();
 }
