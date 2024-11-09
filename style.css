@@ -11,9 +11,9 @@ body{
     font-family: sans-serif;
 }
 #addTodo{
-    padding: 5px;
+    padding: 10px;
     font-size: 25px;
-    width: 50px;
+    width: 70px;
     border-radius: 5px;
     border: 1px solid #dadada;
 }
@@ -36,10 +36,10 @@ ul{
     margin-top: 20px;
 }
 #todo{
-    padding: 5px;
+    padding: 20px;
     width: 100%;
     font-size: 16px;
-    margin-right: 20px;
+    margin-right: 10px;
     border-radius: 5px;
     border: 1px solid #dadada;
 }
@@ -64,27 +64,33 @@ li{
     border: 1px solid #dadada;
 }
 .cross-img{
-    width: 17px;
-    margin-left: 10px;
+    width: 12px;
+    margin-left: 20px;
 }
 #icon{
-    padding: 5px;
+    padding: 10px;
+    margin: 0px 10px;
     border-radius: 5px;
     border: 1px solid #dadada;
 }
 #icon > img{
-    width: 30px !important;
+    width: 24px !important;
 }
 .row, li{
     gap: 4px;
     display: flex;
+    box-sizing: border-box;
     margin: 10px 0px;
     box-sizing: border-box;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 }
+li{
+    padding:10px 20px;
 
-.del-img{
-    width: 20px;
+}
+.edit-img{
+    width: 15px;
 
 }
 button{

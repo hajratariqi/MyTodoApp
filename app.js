@@ -10,6 +10,9 @@ let count = 0
 const addTodo = () =>{
     if(todoInp.value){
         let li = document.createElement('li');
+        let inpContainer = document.createElement('div');
+        inpContainer.classList.add('inpContainer');
+
         let inp = document.createElement('input');
         inp.setAttribute('disabled', true);
         inp.setAttribute('type', 'text');
@@ -34,17 +37,22 @@ const addTodo = () =>{
             todoNum.innerHTML = count;
           })
 
-          
+
+          let btnContainer = document.createElement('div');
+          btnContainer.classList.add('btnContainer');
+
+        
         todosCount.appendChild(todoNum)
         li.appendChild(checkBox)
         ul.appendChild(li);
         li.appendChild(inp);
 
+        
           // Create Edit button
         let editBtn = document.createElement('button');
         let editIcon = document.createElement('img');
         editIcon.src = 'edit.webp'
-        editIcon.classList.add('del-img')
+        editIcon.classList.add('edit-img')
         editBtn.appendChild(editIcon);
         li.appendChild(editBtn);
         editBtn.setAttribute('onclick', 'editTodo(this)')
@@ -58,8 +66,19 @@ const addTodo = () =>{
         delBtn.appendChild(delIcon);
         li.appendChild(delBtn);
 
+        btnContainer.appendChild(editBtn);
+        btnContainer.appendChild(delBtn);
         todoInp.value = "";  
         todoNum.innerHTML = count;
+
+
+        li.appendChild(inpContainer)
+        inpContainer.appendChild(checkBox)
+        inpContainer.appendChild(inp)
+
+        li.appendChild(btnContainer);
+        console.log(li);
+        
     }else{
         alert('Enter value in todo')
     }
