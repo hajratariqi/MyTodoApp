@@ -63,10 +63,11 @@ const addTodo = () =>{
         let delIcon = document.createElement('img');
         delIcon.src = 'del.png'
         delIcon.classList.add('cross-img')
-        delBtn.setAttribute('onclick', 'this.parentNode.remove()');
+        delBtn.setAttribute('onclick', 'removeTodo(this)');
         delBtn.appendChild(delIcon);
         li.appendChild(delBtn);
-
+        console.log(delBtn);
+        
         btnContainer.appendChild(editBtn);
         btnContainer.appendChild(delBtn);
         todoInp.value = "";  
@@ -118,4 +119,11 @@ const editTodo = (e) => {
             editTodo(e)
         }
     })
+}
+
+const removeTodo = (e) =>{
+    count -=1;
+    console.log(count);
+    todoNum.innerHTML = count;
+    e.parentNode.parentNode.remove();
 }
