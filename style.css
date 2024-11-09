@@ -9,20 +9,22 @@ body{
     flex-direction: column;
     justify-content: center;
     font-family: sans-serif;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/928/870/431/abstraction-abstract-dark-geometry-wallpaper-preview.jpg');
 }
 #addTodo{
     padding: 10px;
-    font-size: 25px;
-    width: 70px;
+    font-size: 18px;
+    width: 50px;
     border-radius: 5px;
     border: 1px solid #dadada;
 }
 .todo-box{
     padding: 40px;
-    width: 40%;
+    width: 50%;
     border-radius: 10px;
     box-shadow: 1px 1px #dadada;
-    background-color: #fcf9ff;
+    background-color: #000;
+    color: white;
 }
 #todosCount{
     color: gray;
@@ -34,10 +36,10 @@ body{
     font-weight: 600 !important;
 }
 ul{
-    margin: 50px 0px;
+    margin: 20px 0px;
 }
 #todo{
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     font-size: 16px;
     margin-right: 10px;
@@ -47,11 +49,11 @@ ul{
 #todoTask{
     border: none;
     padding: 5px;
-    font-size: 20px;
+    font-size: 16px;
     background-color: white;
 }
 .saveBtn{
-    padding: 5px 10px;
+    padding: 5px;
     color: white;
     font-size: 17px;
     border-radius: 5px;
@@ -70,13 +72,13 @@ li{
     margin-left: 20px;
 }
 #icon{
-    padding: 10px;
+    padding:10px;
     margin: 0px 10px;
     border-radius: 5px;
     border: 1px solid #dadada;
 }
 #icon > img{
-    width: 24px !important;
+    width: 17px !important;
 }
 .row, li{
     gap: 4px;
@@ -88,7 +90,7 @@ li{
     justify-content: space-between;
 }
 li{
-    padding:10px 20px;
+    padding:10px 15px;
 
 }
 .edit-img{
