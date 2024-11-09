@@ -1,102 +1,184 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
     display: flex;
-    height: 100vh;
-    align-items: center;
-    flex-direction: column;
     justify-content: center;
-    font-family: sans-serif;
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/928/870/431/abstraction-abstract-dark-geometry-wallpaper-preview.jpg');
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
-#addTodo{
-    padding: 10px;
-    font-size: 18px;
-    width: 50px;
-    border-radius: 5px;
-    border: 1px solid #dadada;
-}
-.todo-box{
-    padding: 40px;
-    width: 40%;
-    border-radius: 10px;
-    box-shadow: 1px 1px #dadada;
-    background-color:azure;
-}
-#todosCount{
-    color: gray;
-    font-style: italic;
-}
-.todo-box > h1{
-    margin-bottom: 30px;
+
+.todo-box {
+    background-color: #ffffff;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-weight: 600 !important;
 }
-ul{
-    margin: 20px 0px;
+
+.heading {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
-#todo{
-    padding: 10px;
-    width: 100%;
-    font-size: 16px;
-    margin-right: 10px;
-    border-radius: 5px;
-    border: 1px solid #dadada;
-}
-#todoTask{
-    border: none;
-    padding: 5px;
-    font-size: 16px;
-    background-color: white;
-}
-.saveBtn{
-    padding: 5px;
-    color: white;
-    font-size: 17px;
-    border-radius: 5px;
-    background-color: black;
-}
-li{
-    border-radius: 5px;
-    padding: 5px;
-    background-color: white;
-    text-align: left;
-    margin-top: 10px;
-    border: 1px solid #dadada;
-}
-.cross-img{
-    width: 12px;
-    margin-left: 20px;
-}
-#icon{
-    padding:10px;
-    margin: 0px 10px;
-    border-radius: 5px;
-    border: 1px solid #dadada;
-}
-#icon > img{
-    width: 17px !important;
-}
-.row, li{
-    gap: 4px;
+
+.input-row {
     display: flex;
-    box-sizing: border-box;
-    margin: 10px 0px;
-    box-sizing: border-box;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#todo {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#todo:focus {
+    border-color: #6200ea;
+}
+
+.primary-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: #7e3ff2;
+}
+
+#todoList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+li {
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.8rem;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ddd;
+    transition: transform 0.1s;
 }
-li{
-    padding:10px 15px;
 
+li:hover {
+    transform: scale(1.02);
 }
-.edit-img{
-    width: 15px;
 
+.inpContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
-button{
+
+.inpContainer input[type="text"] {
     border: none;
-    background-color: white;
+    background: transparent;
+    color: #333;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+}
+
+li button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+li button:hover {
+    background-color: #e0e0e0;
+}
+
+.cross-img, .edit-img {
+    width: 16px;
+    height: 16px;
+}
+
+#todosCount {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .todo-box {
+        width: 90%;
+        padding: 2rem;
+    }
+    
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    #todo {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+    }
+
+    .primary-btn {
+        font-size: 10px !important;
+        padding: 0.6rem 1rem;
+    }
+
+    li {
+        padding: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .todo-box {
+        padding: 1rem;
+    }
+
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    #todo {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .primary-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    #todosCount {
+        font-size: 0.8rem;
+    }
+
+    li {
+        padding: 0.5rem;
+        font-size: 0.9rem !important;
+    }
 }
