@@ -20,11 +20,10 @@ body{
 }
 .todo-box{
     padding: 40px;
-    width: 50%;
+    width: 40%;
     border-radius: 10px;
     box-shadow: 1px 1px #dadada;
-    background-color: #000;
-    color: white;
+    background-color:azure;
 }
 #todosCount{
     color: gray;
