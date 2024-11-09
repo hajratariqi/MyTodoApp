@@ -17,6 +17,7 @@ h1 {
     color: white;
     padding: 4px 10px;
     border-radius: 5px;
+    font-size: 20px;
     background-color: rgb(24, 21, 21);
 }
 ul{
@@ -47,7 +48,7 @@ ul{
 }
 li{
     border-radius: 5px;
-    padding: 2px 20px;
+    padding: 2px;
     /* box-shadow: 1px 1px 1px #dadada; */
     border: 1px solid #dadada;
     margin-top: 10px;
