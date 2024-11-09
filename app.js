@@ -24,8 +24,9 @@ const addTodo = () =>{
           // check box in todo item
           let checkBox = document.createElement('input')
           checkBox.setAttribute('type', 'checkbox')
+
           checkBox.addEventListener('click', ()=>{
-            if(checkBox.checked){
+          if(checkBox.checked){
                 count -= 1;
                 inp.style.textDecoration = 'line-through'
                 inp.style.color = 'gray'
