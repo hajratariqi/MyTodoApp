@@ -18,10 +18,11 @@ body{
     border: 1px solid #dadada;
 }
 .todo-box{
-    padding: 50px;
-    border-radius: 30px;
+    padding: 40px;
     width: 40%;
-    border: 1px solid #dadada;
+    border-radius: 10px;
+    box-shadow: 1px 1px #dadada;
+    background-color: #fcf9ff;
 }
 #todosCount{
     color: gray;
@@ -33,7 +34,7 @@ body{
     font-weight: 600 !important;
 }
 ul{
-    margin-top: 20px;
+    margin: 50px 0px;
 }
 #todo{
     padding: 20px;
@@ -47,7 +48,7 @@ ul{
     border: none;
     padding: 5px;
     font-size: 20px;
-    background-color: transparent;
+    background-color: white;
 }
 .saveBtn{
     padding: 5px 10px;
@@ -59,6 +60,7 @@ ul{
 li{
     border-radius: 5px;
     padding: 5px;
+    background-color: white;
     text-align: left;
     margin-top: 10px;
     border: 1px solid #dadada;
@@ -95,5 +97,5 @@ li{
 }
 button{
     border: none;
-    background-color: transparent;
+    background-color: white;
 }
