@@ -1,4 +1,4 @@
-let addTodoBtn = document.getElementById('addTodo'); 
+let addTodoBtn = document.getElementById('addTodo');
 let todoInp = document.getElementById('todo');
 let ul = document.getElementById('todoList');
 let delAll = document.getElementById('delAll');
@@ -84,6 +84,7 @@ todoInp.addEventListener('keypress', (e)=>{
 addTodoBtn.addEventListener('click', addTodo)
 
 delAll.addEventListener('click', ()=>{
+    count = 0;
     ul.innerHTML = ''
 })
 
